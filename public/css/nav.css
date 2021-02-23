@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{ 
+    min-height: 100vh;
+    overflow: auto;
+    background: linear-gradient(hsl(261, 45%, 30%),hsl(238, 47%, 43%));
+}
+
+h1,a{
+    font-family: 'Acme', sans-serif;
+}
+
+h2,h3,h4,h5,h6,p{
+    font-family: 'Abhaya Libre', serif;
+}
+
+.nav{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.nav h1 a{
+    color: rgb(252, 47, 115);
+    font-size: 2rem;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav--dropdown{
+    display: none;
+}
+
+.nav--ul{
+    display: flex;
+    list-style: none;
+    margin-right: 10px;
+}
+
+.nav--ul__li:nth-last-child(n+1){
+    margin-left: 40px;
+}
+
+.nav--ul__li a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 240px) and (max-width: 767px){
+    .nav{
+        align-items: initial;
+    }
+    
+    .nav--ul{
+        display: none;
+    }
+
+    .nav--dropdown{
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-dropdown {
+        background:transparent;
+        border: none;
+        outline: none;
+    }
+
+    .button-dropdown i{
+        color: white;
+    }
+    
+    .dropdown--content {
+        display: none;
+    }
+
+    .nav--ul--dropdown{
+        list-style: none;
+        margin-right: 10px;
+    }
+
+    .nav--ul__li--dropdown{
+        margin-top: 5px;
+    }
+
+    .nav--ul__li--dropdown a{
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+}

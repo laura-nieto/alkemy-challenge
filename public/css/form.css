@@ -1,0 +1,166 @@
+.article--login{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    width: 40vh;
+}
+
+.article--login__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 60px;
+    width: 80%;
+}
+
+.article--login--form--input{
+    border-radius: 4px;
+    border: #D0506E solid 2px;
+    font-size: 1.3rem;
+    margin-top: 40px;
+    outline: none;
+    padding: 5px;
+}
+
+.article--login--form__button{
+    background-color: transparent;
+    border: solid 2px #D0506E;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+.margin-top{
+    margin-top: 40px;
+}
+
+.article--login--form__remember{
+    color: #FFFADE;
+    font-family: 'Abhaya Libre', serif;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.article--login--form__remember input{
+    margin-right: 5px;
+    align-self: center;
+}
+
+.article--login--form__links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.article--login--form__links a{
+    color: #FFFADE;
+}
+
+
+/* REGISTER */
+.article--register--form__permission{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 0;
+}
+
+.article--register--form__permission *{
+    cursor: pointer;
+    margin: 0;
+}
+
+.error{
+    color: rgb(240, 0, 0);
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* NEW APP */
+.input--text{
+    border: solid 2px #D0506E;
+    font-family: 'Abhaya Libre', serif;
+    font-size: 1.2rem;
+    outline: none;
+    padding: 10px 10px 0 10px;
+}
+
+.article--add__select{
+    font-family: 'Abhaya Libre', serif;
+    font-size: 1.2rem;
+    outline: none;
+    padding: 5px;
+}
+
+.input--file{
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+/* REMOVE APP */
+.article--remove{
+    margin-top: 60px;
+}
+ 
+.article--remove__form{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 0 auto;
+
+}
+
+.article--remove__form h3{
+    color: white;
+    grid-column: 1/span 3;
+    font-size: 1.8rem;
+    justify-self: center;
+    margin: 0 0 40px 30px;
+}
+
+.article--remove__button{
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+}
+
+.article--remove__a{
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+}
+
+/* UPDATE APP */
+.updateApp__h2{
+    color: rgb(252, 47, 115);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.updateApp__img{
+    align-self: center;
+    background-color: white;
+    height: auto;
+    width: 50%;
+}
+
+.updateApp__h3{
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+
+@media(min-width:320px) and (max-width:864px){
+    .article--remove__button{
+        grid-column: 1;
+        justify-self: center;
+    }
+    
+    .article--remove__a{
+        grid-column: 3;
+        justify-self: center;
+    }
+}

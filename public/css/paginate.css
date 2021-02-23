@@ -1,0 +1,33 @@
+.pagination{
+    display: flex;
+    list-style: none;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.pagination li{
+    font-size: 1.5rem;
+    border: white solid 1px;
+    padding: 8px 16px;
+}
+
+.pagination li a{
+    color: white;
+}
+
+.page-link{
+    text-decoration: none;
+}
+
+.active{
+    color: white;
+    background-color: rgb(248, 88, 141);
+}
+.disabled{
+    color: #6c757d;
+}
+
+.pagination li:hover:not(.active,.disabled){
+    background-color: rgba(170, 168, 168, 0.432);
+    transition: background-color .3s;
+}

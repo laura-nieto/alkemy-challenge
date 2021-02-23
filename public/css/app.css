@@ -1,0 +1,323 @@
+/* APPS GRAL */
+.article--apps{
+    display: grid;
+    grid-template-columns: repeat(5,minmax(0,1fr));
+    grid-template-rows: minmax(0, 5fr);
+    margin: 60px 0;
+}
+
+.article--apps__cards{
+    align-self: center;
+    background-color: #D0506E;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: center;
+    padding: 25px;
+    width: 65%;
+}
+
+.article--apps__cards img{
+    background-color: white;
+    height: auto;
+    width: 100%;
+}
+
+.article--apps__cards h5{
+    font-size: 1.3rem;
+    margin: 15px 0;
+}
+
+.article--apps__cards h5 a{
+    color: #FFFADE ;
+    font-family: 'Abhaya Libre', serif;
+    letter-spacing: 0.07em;
+    text-decoration: none;
+}
+
+.article--apps__cards p{
+    color: #FFFADE;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.article--apps__cards--p{
+    color: #FFFADE;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.apps--title {
+    color: rgb(252, 47, 115);
+    font-size: 2.2rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+/* APP DESCRIPTION */
+.article--app{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0, 1fr));
+    margin: 70px auto;
+    width: 80%;
+}
+
+.article--app img {
+    grid-column: 1;
+    grid-row: 2;
+    height: auto;
+    width: 70%;
+    justify-self: center;
+}
+
+.article--app__tittle{
+    align-self: center;
+    color: white;
+    font-size: 1.9rem;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+}
+
+.article--app__description{
+    align-self: center;
+    color: white;
+    font-size: 1.2rem;
+    grid-column: 2/span 2;
+    grid-row: 2;
+    width: 60%;
+}
+
+.article--app__price{
+    color: white;
+    font-size: 1.4rem;
+    grid-column: 3;
+    grid-row: 2;
+    place-self: flex-end flex-end;
+}
+
+.article--app__button{
+    align-self: center;
+    background-color: transparent;
+    border: solid 2px #D0506E;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    font-size: 1.2rem;
+    grid-column: 2;
+    justify-self: center;
+    margin-top: 30px;
+    padding: 10px 30px;
+}
+
+
+/* MY APPS */
+.myApps__h2{
+    color: rgb(252, 47, 115);
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.myApps{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    margin-top: 70px;
+}
+
+.myApps--div{
+    align-items: center;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.myApps--div img{
+    background-color: white;
+    height: auto;
+    width: 100px;
+}
+
+.myApps--div__title a, .myApps--div--dev__title{
+    color: white;
+    font-size: 1.3rem;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.button{
+    background-color: transparent;
+    border: solid 2px #D0506E;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.myApps__button{
+    grid-row: 1;
+    grid-column: 2/span 2;
+    place-self: start center;
+    margin-bottom: 50px;
+}
+
+.myApps--div--dev{
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 3;
+    grid-row: 2;
+    justify-self: center;
+}
+
+.myApps--div--dev img{
+    background-color: white;
+    grid-column: 1 /span 2;
+    height: auto;
+    justify-self: center;
+    width: 100px;
+}
+
+.myApps--div--dev__title{
+    grid-row: 2;
+    grid-column: 1 /span 2;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+.myApps--div--dev__button{
+    font-size: 1rem;
+    grid-row: 3;
+    margin: 10px 4px 0;
+    padding: 3px 10px;
+}
+
+.center{
+    margin-left: 30px;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 1024px) and (max-width: 1200px){
+    .article--apps{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .article--apps{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+
+    .myApps{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .myApps__button{
+        grid-column: 2;
+    }
+
+    .article--app__tittle{
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 580px) and (max-width: 767px){
+    .article--apps{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+    .article--apps__cards{
+        width: 80%;
+    }
+
+    .article--app__tittle{
+        margin-bottom: 30px;
+    }
+    
+    .myApps{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .myApps__button{
+        grid-column: 2;
+    }
+}
+
+@media(min-width:480px) and (max-width:579px){
+    .article--apps{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .article--apps__cards{
+        margin-top: 20px;
+    }
+
+    .article--app{
+        grid-template-rows: none;
+    }
+    .article--app__tittle{
+        margin-bottom: 30px;
+    }
+    .article--app img{
+        align-self: center;
+    }
+    .article--app__description{
+        margin-top: 20px;
+    }
+    .article--app__price{
+        align-self: center;
+        grid-row: 3;
+        grid-column: 2;
+        margin-top: 20px;
+    }
+
+    .myApps{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .myApps__button{
+        grid-column: 1/span 2;
+    }
+}
+
+@media(min-width:320px) and (max-width:479px){
+    .article--apps{
+        grid-template-columns: repeat(1,minmax(0,1fr));
+    }
+    .article--apps__cards{
+        margin-top: 20px;
+    }
+
+    .article--app{
+        grid-template-rows: none;
+    }
+    .article--app__tittle{
+        grid-column: 1/span 2;
+    }
+    .article--app img{
+        align-self: center;
+    }
+    .article--app__description{
+        font-size: unset;
+        margin-top: 20px;
+    }
+    .article--app__price{
+        align-self: center;
+        grid-row: 3;
+        grid-column: 2;
+        margin-top: 20px;
+    }
+
+    .myApps{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .myApps__button{
+        grid-column: 1;
+    }
+    .myApps--div--dev{
+        grid-row: auto;
+        margin-bottom: 50px;
+    }
+}

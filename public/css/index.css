@@ -1,0 +1,127 @@
+.welcome{
+    color: rgb(252, 47, 115);
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+/* CATEGORY */
+.category {
+    display: flex;
+    margin-top: 80px;
+}
+
+.category h3 {
+    align-self: center;
+    color: rgb(255, 232, 240);
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
+
+.category--ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 60%;
+}
+
+.category--ul__li {
+    border: solid 1px rgb(252, 47, 115);
+    border-radius: 10%;
+    padding: 5px 20px;
+}
+
+.category--ul__li a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* APPS */
+.article{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 60px 30px;
+}
+
+.article h3 {
+    color: rgb(255, 232, 240);
+    font-size: 1.4rem;
+    grid-column: 1/span 2;
+    margin: 10px 0;
+}
+
+.article--cards{
+    background-color: hsl(260, 42%, 33%);  
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    grid-column: auto;
+    grid-row: 2;
+    justify-self: center;
+    margin-right: 15px;
+    padding: 10px;
+    width: 80%;
+}
+
+.article--cards h6{
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.article--cards a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.article--cards img{
+    background-color: white;
+    height: auto;
+    margin-bottom: 10px;
+    width: 30%;
+}
+
+.article--cards p{
+    font-size: 1.2rem;
+}
+
+.see-more{
+    background-color: transparent;
+    border: solid 2px #D0506E;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: center;
+    margin-top: 30px;
+    padding: 10px 40px;
+}
+
+.see-more a{
+    color: white;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 240px) and (max-width: 767px){
+    .category h3 {
+        display: none;
+    }
+    .category--ul{
+        width: 100%;
+    }
+    
+    .article{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .article--cards{
+        grid-row: auto;
+        margin-top: 20px;
+    }
+    .see-more{
+       align-self: center;
+    }
+}
