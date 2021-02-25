@@ -16,16 +16,16 @@
                 <small id="emailHelp" class="error">{{$message}}</small>
             @enderror()
             
-            <input type="password" name="confirm" id="confirm" class="article--login--form--input" placeholder="Contraseña">
+            <input type="password" name="confirm" id="confirm" class="article--login--form--input" placeholder="Confirmar contraseña">
             @error('confirm')
                 <small id="emailHelp" class="error">{{$message}}</small>
             @enderror()
             
             <div class="article--register--form__permission">
-                <label for="user" class="article--login--form__remember"><input type="radio" name="permission" id="user" value="0">Usuario</label>
-                <label for="developer" class="article--login--form__remember"><input type="radio" name="permission" id="developer" value="1">Desarrollador</label>
+                <label for="user" class="article--login--form__remember"><input type="radio" name="role" id="user" value="1">Usuario</label>
+                <label for="developer" class="article--login--form__remember"><input type="radio" name="role" id="developer" value="0">Desarrollador</label>
             </div>
-            @error('permission')
+            @error('role')
                 <small id="emailHelp" class="error">{{$message}}</small>
             @enderror()
             <input type="submit" value="Registrarse" class="article--login--form__button margin-top">

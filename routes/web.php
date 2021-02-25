@@ -20,6 +20,7 @@ Route::get('/apps','AppController@index');
 Route::get('/apps/{category_name}','CategoryController@show');
 
 Route::get('/app/{id}','AppController@show');
+Route::post('/app/{id}','ShopsController@store');
 
 Route::get('/me/{id}','UserController@show')->middleware('auth');
 

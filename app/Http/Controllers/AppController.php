@@ -75,9 +75,7 @@ class AppController extends Controller
 
         /* TABLE PIVOT */
         $idUser = Auth::user()->id;
-        $app->users()->attach($idUser);
-
-
+        $app->developer()->attach($idUser);
 
         return redirect()->action('UserController@show',$idUser);
     }
@@ -163,7 +161,7 @@ class AppController extends Controller
     {
         $idUser = Auth::user()->id;
         
-        $app->find($id)->users()->detach($idUser);
+        $app->find($id)->developer()->detach($idUser);
         $app->find($id)->delete();
 
         return redirect()->action('UserController@show',$idUser);

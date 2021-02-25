@@ -37,9 +37,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function app()
+    public function appBuy()
     {
-        return $this->belongsToMany('App\App','users_apps')->withTimestamps();
+        return $this->belongsToMany('App\App','shops');
+    }
+    public function appDev()
+    {
+        return $this->belongsToMany('App\App','app_dev');
     }
 
 }

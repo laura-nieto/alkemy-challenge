@@ -3,6 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Resources\App as AppResource;
+use App\App;
+
+use App\Shops;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/buy','ShopsController@index');
+Route::post('/buy','ShopsController@store');
+//Route::delete('/buy/','ShopsController');

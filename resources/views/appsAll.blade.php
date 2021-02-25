@@ -1,7 +1,12 @@
 @extends('layouts.plantilla')
 @section('title','Aplicaciones - AppsStore')
 @section('main')
-    
+    @if(session('buyed'))
+        <div class="div--messageBuyed">
+            <i class="far fa-check-circle fa-2x"></i>
+            <h4 class="h4--messageBuyed">{{session('buyed')}}</h4>
+        </div>
+    @endif
     <article class="category">
         <h3>Categorías:</h3>
         <ul class="category--ul">

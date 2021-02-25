@@ -56,7 +56,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('login');
+        return view('my_register');
     }
 
     /**
@@ -74,7 +74,7 @@ class UserController extends Controller
             'user' => 'required|unique:users,username',
             'password' => 'required|required_with:confirm|same:confirm|min:8',
             'confirm' => 'required',
-            'permission' => 'required'
+            'role' => 'required'
         ];
 
         $message = [
@@ -91,11 +91,11 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->username = $request->user;
         $user->password = Hash::make($request->password);
-        $user->permission = $request->permission;
+        $user->role = $request->role;
         
         $user->save();
 
-        return view('login');
+        return redirect()->route('login');
     }
 
     /**
