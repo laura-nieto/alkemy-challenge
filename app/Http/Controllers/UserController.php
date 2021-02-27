@@ -24,7 +24,13 @@ class UserController extends Controller
 
         $validate = $request->validate($rules,$message);
 
-        if (Auth::attempt($credentials)) {
+        if($request->remember){
+            $remember = true;
+        } else {
+            $remember = false;
+        }
+
+        if (Auth::attempt($credentials,$remember)) {
             // Authentication passed...
             return redirect()->action('CategoryController@index');
         } else {

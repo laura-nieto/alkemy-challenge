@@ -48,6 +48,7 @@
             <h4>Contáctanos:</h4>
         </article>
     </footer> --}}
-    <script src="{{asset('js/nav.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{asset('js/nav-app.js')}}"></script>
 </body>
 </html>

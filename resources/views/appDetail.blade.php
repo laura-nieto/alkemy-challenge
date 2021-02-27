@@ -1,6 +1,12 @@
 @extends('layouts.plantilla')
 @section('title',"App - AppsStore")
-@section('main')   
+@section('main')
+
+    <div class="div--messageError">
+        <i class="far fa-times-circle fa-2x"></i>
+        <h4 class="h4--messageError"></h4>
+    </div>
+
     <article class="article--app">
         <img src="{{asset("/img/$app->image")}}" alt="Imágen de la aplicación">
         <h2 class="article--app__tittle">{{$app->name}}</h2>
@@ -20,12 +26,12 @@
         @endif
 
         <div class="div--buy">
-            <form action="" method="post">
+            <form action="" method="post" id="form--buy">
                 @csrf
                 <h3>¿Desea comprar {{$app->name}}?</h3>
                 @if(Auth::check())
-                    <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-                    <input type="hidden" name="app_id" value="{{$app->id}}">
+                    <input type="hidden" name="user_id" value="{{Auth::user()->id}}" id="user_id">
+                    <input type="hidden" name="app_id" value="{{$app->id}}" id="app_id">
                     <div class="answer">
                         <button type="submit" class="button" id="buy-yes">Sí</button>
                         <a href="/apps" class="button" id="buy-no">No</a>

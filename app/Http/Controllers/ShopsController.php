@@ -34,8 +34,12 @@ class ShopsController extends Controller
      */
     public function store(Request $request)
     {
-        Shops::create($request->all());
-        return redirect()->action('AppController@index')->with('buyed','Compra realizada con éxito');
+        $newShop = Shops::create($request->all());
+        
+        if($newShop){
+            return response()->json(['message'=>'Compra realizada con éxito'],201);
+        }
+        
     }
 
     /**
@@ -78,8 +82,14 @@ class ShopsController extends Controller
      * @param  \App\Shops  $shops
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Shops $shops)
+    public function destroy($id)
     {
-        //
+        $shops = Shops::findOrFail($id);
+        if($shops) {
+            $shops->delete();
+            return response()->json(['message' => 'Compra eliminada']);
+        } else {
+            return response()->json(['message' => 'Ocurrió un error']);
+        }
     }
 }

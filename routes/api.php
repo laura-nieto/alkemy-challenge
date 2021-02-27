@@ -22,6 +22,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/buy','ShopsController@index');
+//Route::get('/buy','ShopsController@index');
 Route::post('/buy','ShopsController@store');
-//Route::delete('/buy/','ShopsController');
+Route::delete('/buy/{id}','ShopsController@destroy');

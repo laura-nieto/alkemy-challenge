@@ -25,21 +25,21 @@
     text-decoration: none;
 }
 
-/* MESSAGE BUYED */
+/* MESSAGE ERROR */
 
-.div--messageBuyed{
+.div--messageError{
     align-items: center;
-    display: flex;
+    display: none;
     justify-content: center;
     margin-top: 40px;
 }
 
-.div--messageBuyed i{
-    color: #4ec85b;
+.div--messageError i{
+    color: #ff3333;
 }
 
-.h4--messageBuyed{
-    color: #4ec85b;
+.h4--messageError{
+    color: #ff3333;
     font-size: 1.5rem;
     margin-left: 15px;
 }
